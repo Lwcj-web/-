@@ -1,0 +1,40 @@
+# 依赖
+node_modules/
+package-lock.json
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*~
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 构建/测试产物
+report.json
+tests/report.json
+coverage/
+
+# 视频中间产物：旁白 wav 与分段 mp4 可由 tools/video 的五步重新生成，
+# 入库会让仓库体积膨胀四倍以上。成片 media/FinGuard-演示视频.mp4 保留。
+media/vo/
+media/.build/
+media/frames/
+media/*.raw.webm
+
+# TTS 临时脚本：voice.js 每次都会重写 voice.ps1；
+# 其余按语速档位手动留的副本与探测脚本属于一次性的调试残留，不进仓库。
+tools/video/voice.ps1
+tools/video/voice[0-9].ps1
+tools/video/_probe.ps1
+tools/video/vo_list.json
+tools/video/*.log
+
+# 本地环境
+.env
+.env.local
+# publish-github.js 读取的本地凭据文件
+tools/.github-token

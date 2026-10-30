@@ -1,0 +1,20 @@
+{
+  "name": "finguard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FinGuard — 把安全写进执行链路的 AI Banking Agent（2026 深圳国际金融科技大赛 · AI 赛道）",
+  "license": "MIT",
+  "scripts": {
+    "start": "node tools/serve.js",
+    "test": "node tests/run.js && node tests/e2e.js",
+    "test:dom": "node tests/dom.test.js",
+    "test:all": "node tests/run.js && node tests/e2e.js && node tests/dom.test.js",
+    "dryrun": "node tools/dryrun.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}
